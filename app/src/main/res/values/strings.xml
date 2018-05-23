@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NotesAndTasks</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="topBarPlaceholder">Nazwa listy</string>
+    <string name="newTaskPlaceholder">Dodaj nowy element listy...</string>
+    <string name="tasksBTN">Tasks</string>
+    <string name="notesBTN">Notes</string>
+    <string name="taskPlaceholder">Your task</string>
+</resources>

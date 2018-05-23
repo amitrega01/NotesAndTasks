@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.BottomMenuFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/rounded_bottom"
+        android:elevation="8dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/newTaskContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@null"
+                android:hint="@string/newTaskPlaceholder"
+                android:textColor="@color/lightText"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_alignBaseline="@id/newTaskContent"
+                android:layout_alignParentRight="true"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/add_button"
+                android:fontFamily="@font/product_sans"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:padding="0dp"
+                android:text="Dodaj"
+
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+
+                />
+
+            <TextView
+                android:id="@+id/titleTopBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/newTaskContent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="@string/topBarPlaceholder"
+                android:textColor="@color/black"
+                android:textSize="36sp" />
+            <!--TODO: RecyclerView na liste list zadan xd-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/taskCategoriesRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/titleTopBar">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

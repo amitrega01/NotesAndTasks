@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    tools:context=".Fragments.TopMenuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/chip">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/tasksBtn"
+            style="@style/ButtonBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_outline_done_24px"
+            android:drawableTint="@drawable/selector"
+            android:text="@string/tasksBTN" />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/notesBtn"
+            style="@style/ButtonBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_outline_notes_24px"
+            android:drawableTint="@drawable/selector"
+            android:text="@string/notesBTN" />
+
+
+    </LinearLayout>
+</RelativeLayout>
