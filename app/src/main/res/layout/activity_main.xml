@@ -29,7 +29,7 @@
 
         <fragment
             android:id="@+id/topFragment"
-            class="pl.insudev.notesandtasks.Fragments.TopMenuFragment"
+            class="pl.insudev.note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

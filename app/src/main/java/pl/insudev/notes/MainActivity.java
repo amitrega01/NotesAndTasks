@@ -19,41 +19,41 @@ public class MainActivity extends AppCompatActivity implements TopMenuFragment.M
     private ViewPager viewPager;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
 
-        appDBHelper = new AppDBHelper(this);
+            appDBHelper = new AppDBHelper(this);
 
 
-        bottomMenuFragment = (BottomMenuFragment) getSupportFragmentManager().findFragmentById(R.id.bottomFragment);
-        bottomMenuFragment.setText(AppDBHelper.appDB.tasks.get(0).listTitle);
+            bottomMenuFragment = (BottomMenuFragment) getSupportFragmentManager().findFragmentById(R.id.bottomFragment);
+            bottomMenuFragment.setText(AppDBHelper.appDB.tasks.get(0).listTitle);
 
-        topMenuFragment = (TopMenuFragment) getSupportFragmentManager().findFragmentById(R.id.topFragment);
+            topMenuFragment = (TopMenuFragment) getSupportFragmentManager().findFragmentById(R.id.topFragment);
 
-        viewPager = findViewById(R.id.viewPager);
-        SmartFragmentStatePagerAdapter adapter = new MyViewPagerAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(adapter);
+            viewPager = findViewById(R.id.viewPager);
+            SmartFragmentStatePagerAdapter adapter = new MyViewPagerAdapter(getSupportFragmentManager());
+            viewPager.setAdapter(adapter);
 
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if (position == 0) topMenuFragment.changeOption(true);
-                else topMenuFragment.changeOption(false);
-            }
+            viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                @Override
+                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                    if (position == 0) topMenuFragment.changeOption(true);
+                    else topMenuFragment.changeOption(false);
+                }
 
-            @Override
-            public void onPageSelected(int position) {
+                @Override
+                public void onPageSelected(int position) {
 
-            }
+                }
 
-            @Override
-            public void onPageScrollStateChanged(int state) {
+                @Override
+                public void onPageScrollStateChanged(int state) {
 
-            }
-        });
-        TasksFragment tasksFragment = (TasksFragment) adapter.getRegisteredFragment(0);
+                }
+            });
+            TasksFragment tasksFragment = (TasksFragment) adapter.getRegisteredFragment(0);
 
 
     }
